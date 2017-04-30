@@ -1,0 +1,104 @@
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adobe(2016)]{Adobe_FormsCentral}
+{\sc Adobe}.
+\newblock \emph{End of support for FormsCentral} [online]. Adobe, 2016.
+  [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z:
+  \url{https://helpx.adobe.com/acrobat/kb/end-of-support-formscentral.html}.
+
+\bibitem[Adobe(2003)]{Adobe_LVD}
+{\sc Adobe}.
+\newblock \emph{Adobe Designer} [online]. Adobe, 2003. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z:
+  \url{http://www.adobe.com/products/server/adobedesigner/}.
+
+\bibitem[Adobe Forms()]{Adobe_forms}
+\emph{About fillable PDF forms and determining their capabilities} [online].
+  Adobe Systems Incorporated., 2016. [cit.~2017/03/29]. About fillable forms.
+\newblock Dostupn{\'{e}}~z:
+  \url{https://helpx.adobe.com/acrobat/kb/create-fillable-pdf-forms-acrobat.html}.
+
+\bibitem[Adobe History()]{Adobe_history}
+\emph{A BRIEF HISTORY OF ADOBE SYSTEMS INC.} [online]. Investintech.com Inc.,
+  2012. [cit.~2017/03/29]. History of the company.
+\newblock Dostupn{\'{e}}~z:
+  \url{http://www.investintech.com/resources/articles/adobehistory/}.
+
+\bibitem[Adobe LiveCycle Forum()]{Adobe_LVD_forum}
+\emph{Where has LiveCycle gone?} [online]. 2010. [cit.~2017/03/29]. User
+  experience with LiveCycle.
+\newblock Dostupn{\'{e}}~z: \url{https://forums.adobe.com/thread/1187815}.
+
+\bibitem[DOMPDF()]{DOMPDF}
+\emph{DOMPDF Manual} [online]. dompdf project, 2016. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z: \url{https://dompdf.github.io/}.
+
+\bibitem[FPDF Documentation()]{FPDF}
+\emph{Library FPDF} [online]. FPDF, 2017. [cit.~2017/03/29]. FPDF
+  Documentation.
+\newblock Dostupn{\'{e}}~z: \url{https://www.fpdf.org}.
+
+\bibitem[FPDI()]{FPDI}
+\emph{Free PDF Document Importer} [online]. Setasign, 2007. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z:
+  \url{https://www.setasign.com/products/fpdi/about/}.
+
+\bibitem[Mathew(2017)]{Adobe_story}
+{\sc Mathew}, A.
+\newblock \emph{Adobe Systems Incorporated Success Story} [online].
+  Successstory.com, 2017. [cit.~2017/03/29]. Webpage about successful stories.
+\newblock Dostupn{\'{e}}~z:
+  \url{https://successstory.com/companies/adobe-systems-incorporated}.
+
+\bibitem[mPDF()]{mPDF}
+\emph{mPDF Manual} [online]. Ian N Back, 2015. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z: \url{https://mpdf.github.io/}.
+
+\bibitem[PDF Parser()]{PDF_Parser}
+\emph{PHP library to parse PDF files and extract elements like text} [online].
+  Sebastien Malot, 2014. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z: \url{http://pdfparser.org/}.
+
+\bibitem[Pdf Toolkit()]{PDF_Toolkit}
+\emph{PDFtk the pdf toolkit} [online]. PDF Labs, 2004. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z:
+  \url{https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/}.
+
+\bibitem[PDFlib Documentation()]{PDFlib}
+\emph{Library PDFlib} [online]. PDFlib, 2017. [cit.~2017/03/29]. PDFlib
+  Documentation.
+\newblock Dostupn{\'{e}}~z: \url{https://www.pdflib.com/}.
+
+\bibitem[PDFlib GmbH~München(1997)]{PDFlib_Manual}
+{\sc PDFlib GmbH~München}, G.
+\newblock Reference Manual.
+\newblock \emph{A library for generating PDF on the fly}. 1997, s. 226.
+\newblock Dostupn{\'{e}}~z:
+  \url{https://www.uni-regensburg.de/rechenzentrum/medien/cms-support/pdflib-manual-5_02.pdf}.
+
+\bibitem[Rochkind(2013)]{FPDF_Book}
+{\sc Rochkind}, M.
+\newblock \emph{Generating PDFs with PHP and FPDF (and TCPDF)}.
+\newblock Amazon, 2013.
+
+\bibitem[Snappy()]{Snappy}
+\emph{Snappy opensource github page} [online]. KnpLabs, 2016.
+  [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z: \url{https://github.com/KnpLabs/snappy}.
+
+\bibitem[TCPDF()]{TCPDF}
+\emph{Open Source PHP class for generating PDF documents} [online]. Nicola
+  Asuni, 2004. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z: \url{https://tcpdf.org/}.
+
+\bibitem[wkhtmltopdf()]{wkhtmltoPDF}
+\emph{wkhtmltopdf site} [online]. Ashish Kulkarni, 2013. [cit.~2017/03/29].
+\newblock Dostupn{\'{e}}~z: \url{https://wkhtmltopdf.org/}.
+
+\end{thebibliography}

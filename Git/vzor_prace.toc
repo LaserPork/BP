@@ -1,0 +1,59 @@
+\select@language {british}
+\select@language {czech}
+\select@language {british}
+\select@language {czech}
+\select@language {czech}
+\select@language {czech}
+\contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Textov\IeC {\'e} form\IeC {\'a}ty}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Adobe}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Formul\IeC {\'a}\IeC {\v r}e}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Acrobat FDF Toolkit}{9}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Acrobat LiveCycle Designer}{9}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}FormsCentral}{10}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Alternativy FormsCentral t\IeC {\v r}et\IeC {\'\i }ch stran}{10}{subsection.1.2.5}
+\contentsline {section}{\numberline {1.3}PDFLib}{10}{section.1.3}
+\contentsline {section}{\numberline {1.4}FPDF}{12}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}FPDI}{12}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.5}mPDF}{12}{section.1.5}
+\contentsline {section}{\numberline {1.6}DOMPDF}{12}{section.1.6}
+\contentsline {section}{\numberline {1.7}Snappy}{13}{section.1.7}
+\contentsline {section}{\numberline {1.8}TCPDF}{13}{section.1.8}
+\contentsline {section}{\numberline {1.9}PDF Parser}{13}{section.1.9}
+\contentsline {section}{\numberline {1.10}PDFToolkit}{13}{section.1.10}
+\contentsline {section}{\numberline {1.11}Z\IeC {\'a}v\IeC {\v e}r pr\IeC {\r u}zkumu}{14}{section.1.11}
+\contentsline {chapter}{\numberline {2}Implementace}{15}{chapter.2}
+\contentsline {chapter}{\numberline {3}Dokumentace}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}T\IeC {\v r}\IeC {\'\i }da PDFWithHeader}{16}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Funkce Header}{16}{subsection.3.1.1}
+\contentsline {subsubsection}{Funkce Cell a jej\IeC {\'\i } parametry}{17}{section*.5}
+\contentsline {section}{\numberline {3.2}Generov\IeC {\'a}n\IeC {\'\i } dokumentu}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Parametry}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Generov\IeC {\'a}n\IeC {\'\i }}{20}{subsection.3.2.2}
+\contentsline {subsubsection}{Slou\IeC {\v c}en\IeC {\'\i }}{20}{section*.6}
+\contentsline {subsubsection}{Prokl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i }}{21}{section*.7}
+\contentsline {subsubsection}{Nadpis}{21}{section*.8}
+\contentsline {section}{\numberline {3.3}Zpracov\IeC {\'a}n\IeC {\'\i } dokumentu}{22}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Parametry}{22}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Zpracov\IeC {\'a}n\IeC {\'\i }}{23}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Parsov\IeC {\'a}n\IeC {\'\i }}{24}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Aktualizace hodnot v datab\IeC {\'a}zi}{24}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}Roz\IeC {\v s}i\IeC {\v r}itelnost}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Formul\IeC {\'a}\IeC {\v r}e v TCPDF}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}P\IeC {\v r}\IeC {\'\i }klad validace formul\IeC {\'a}\IeC {\v r}e pomoc\IeC {\'\i } JavaScripu}{26}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Tvorba formul\IeC {\'a}\IeC {\v r}e}{26}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Testov\IeC {\'a}n\IeC {\'\i }}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Kompatibilita}{29}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Webov\IeC {\'e} prohl\IeC {\'\i }\IeC {\v z}e\IeC {\v c}e}{29}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Editory}{29}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Generov\IeC {\'a}n\IeC {\'\i } a nahr\IeC {\'a}v\IeC {\'a}n\IeC {\'\i }}{30}{section.5.2}
+\contentsline {section}{\numberline {5.3}Odhalen\IeC {\'e} chyby}{30}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Diakritika v nadpisu}{30}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Speci\IeC {\'a}ln\IeC {\'\i } znaky ve formul\IeC {\'a}\IeC {\v r}i}{31}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Nekorektn\IeC {\v e} vypln\IeC {\v e}n\IeC {\'y} formul\IeC {\'a}\IeC {\v r}}{31}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}\IeC {\v S}patn\IeC {\'e} PDF}{32}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Do\IeC {\v c}asn\IeC {\'e} soubory}{32}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}\IeC {\v S}patn\IeC {\'e} parsov\IeC {\'a}n\IeC {\'\i }}{32}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Injekce obsahu bun\IeC {\v e}k}{32}{subsection.5.3.7}
+\contentsline {subsection}{\numberline {5.3.8}Obecn\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{33}{subsection.5.3.8}
+\contentsline {chapter}{Literatura}{34}{chapter*.9}

@@ -1,0 +1,445 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Vzor pro sazbu kvalifikační práce
+%
+% Západočeská univerzita v Plzni
+% Fakulta aplikovaných věd
+% Katedra informatiky a výpočetní techniky
+%
+% Petr Lobaz, lobaz@kiv.zcu.cz, 2016/03/14
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Možné jazyky práce: czech, english
+% Možné typy práce: BP (bakalářská), DP (diplomová)
+\documentclass[czech,BP]{thesiskiv}
+
+% Definujte údaje pro vstupní strany
+%
+% Jméno a příjmení; kvůli textu prohlášení určete, 
+% zda jde o mužské, nebo ženské jméno.
+\author{Jakub Váverka}
+\declarationmale
+
+%alternativa: 
+%\declarationfemale
+
+% Název práce
+\title{Generátor a parser formulářů recenzí příspěvků na konferenci TSD}
+
+% 
+% Texty abstraktů (anglicky, česky)
+%
+\abstracttexten{
+Generator and Parser of Submission Review Forms for the TSD Conference
+
+The text of the abstract (in English). It contains the English translation of the thesis title and a short description of the thesis.}
+
+\abstracttextcz{Text abstraktu (česky). Obsahuje krátkou anotaci (cca 10 řádek) v češtině. Budete ji potřebovat i při vyplňování údajů o bakalářské práci ve STAGu. Český i anglický abstrakt by měly být na stejné stránce a měly by si obsahem co možná nejvíce odpovídat (samozřejmě není možný doslovný překlad!).
+}
+
+% Na titulní stranu a do textu prohlášení se automaticky vkládá 
+% aktuální rok, resp. datum. Můžete je změnit:
+%\titlepageyear{2016}
+%\declarationdate{1. března 2016}
+
+% Ve zvláštních případech je možné ovlivnit i ostatní texty:
+%
+%\university{Západočeská univerzita v Plzni}
+%\faculty{Fakulta aplikovaných věd}
+%\department{Katedra informatiky a výpočetní techniky}
+%\subject{Bakalářská práce}
+%\titlepagetown{Plzeň}
+%\declarationtown{Plzni}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% DODATEČNÉ BALÍČKY PRO SAZBU
+% Jejich užívání či neužívání záleží na libovůli autora 
+% práce
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+% Zařadit literaturu do obsahu
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{listings}
+\lstset{frame=tb,
+  language=php,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+% Umožňuje vkládání obrázků
+\usepackage[pdftex]{graphicx}
+
+% Odkazy v PDF jsou aktivní; navíc se automaticky vkládá
+% balíček 'url', který umožňuje např. dělení slov
+% uvnitř URL
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks=true,
+  unicode=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black,
+  bookmarksopen=true}
+
+% Při používání citačního stylu csplainnatkiv
+% (odvozen z csplainnat, http://repo.or.cz/w/csplainnat.git)
+% lze snadno modifikovat vzhled citací v textu
+\usepackage[numbers,sort&compress]{natbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% VLASTNÍ TEXT PRÁCE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%
+\maketitle
+\tableofcontents
+
+\chapter{Úvod}
+Cílem této práce je navrhnout a implementovat rozšíření již stávající webového portálu pro konferenci TSD. Text, Speech and Dialogue, dále jen TSD, je konference, která probíhá každoročně. Tato konference se zabývá například rozpoznáváním, pochopením, generováním a obecně interakcí lidského jazyka s počítačem. Uživatelé mohou každoročně přihlásit své články do systému, tyto články jsou později ohodnoceny členy programového výboru a buď schváleny nebo odmítnuty. Vyplnění tohoto hodnocení probíhalo doposud jen skrze online formulář. Některým uživatelům však trvalo vyplnění recenze moc dlouho. Pokud není formulář odeslán do určité doby, dojde ke ztrátě vyplněných dat. Mým úkolem je navrhnout způsob jak vyplňování formuláře uživatelům co nejvíce zpříjemnit a umožnit jim hodnocení těchto článků i bez přístupu k internetu. Zároveň musí být řešení dostatečně jednoduché, jelikož se nedá počítat s vysokou počítačovou zdatností uživatelů. Pro uživatele by bylo ideální pokud by mohl jednoduše stáhnout jediný soubor, který by obsahoval článek který má hodnotit a bylo by i možné hodnocení rovnou vyplnit.
+
+Pokud bych zvolil formát souboru, který je pro takové věci určený, bude pravděpodobně neznámý a musel bych po uživatelích požadovat instalaci dodatečných programů. Pokud bych naopak zvolil formát otevíratelný v textovém editoru, zmátl bych nezkušené uživatele a umožnil bych jim zničit strukturu potřebnou k zpětnému zjištění dat. Ideální se zdá být využití formátu PDF. Tento formát je sice velmi rozšířený, ale poměrně uzavřený. Navíc se tento formát nepoužívá jen na textové soubory, a tak není snadno editovatelný. To bude představovat výzvu pro implementaci.
+
+\section{Textové formáty}
+TODO
+\section{Adobe}
+Adobe Systems Incorporated je společnost, která byla založena Johnem Warnockem a Charlesem Geschkem  v roce 1980. Zakladatelé byli do té doby součástí výzkumného týmu ve společnosti Xerox. Jejich prvním produktem byl software nazývaný PostScript. PostScript je programovací jazyk, který dokáže tiskárně popsat rozvržení stránky. Toto byl v té době velký pokrok, který jim vydělal velké množství peněz. Firma Adobe na tento úspěch navázala mnoha dalšími produkty, mezi které patří například první volně škálovatelný font, program na tvorbu maleb Adobe Illustrator a mimo jiné i Portable Document Format neboli PDF. 
+\cite{Adobe_story}
+PDF jako formát pro sdílení a tisknutí elektronických souborů byl zveřejněn v roce 1993. Velmi rychle rozdrtil konkurenci a stal se standardem, který každý zná a běžně využívá každý den. PDF se postupně vyvíjelo, z první verze 1.0 je již momentálně verze 1.7 a touto nejnovější verzí se stalo PDF standardem ISO. Adobe vydalo program pojmenovaný \emph{Acrobat Reader}, který slouží k čtení tohoto formátu. Tento program byl nejdříve placený, ale v současné době je zdarma a tvoří výbavu skoro každého počítače. To je jeden z důvodů proč je právě tento formát ideální pro mou práci.
+\cite{Adobe_history}
+Přestože Adobe umožňuje uživatelům zdarma používat software na čtení tohoto formátu, již neumožňuje tento formát zdarma editovat či jinak měnit. K takovým operacím slouží program s názvem \emph{Acrobat Acrobat}. Licence na tento program musí být placena měsíčně. Navíc je \emph{Acrobat Reader} určen především pro klasické uživatele, kteří budou pracovat skrze grafické rozhraní. Tímto programem není možné vytvořit dokument použitím příkazové řádky nebo nějakým automatizovaným způsobem. 
+
+\subsection{Formuláře}
+Formát PDF může obsahovat i dynamický obsah v podobě vyplnitelných formulářů. Bezplatná verze programu Acrobat Reader však neumožňuje tvorbu takových souborů. K tvorbě formulářů uživatel potřebuje plnou placenou verzi Adobe Acrobat. Po vytvoření takového souboru jej může samozřejmě sdílet s jinými uživateli, kteří ji mohou vyplnit i bezplatnou verzí Acrobat Reader \cite{Adobe_forms}. 
+Formuláře firmy Adobe jsou uzavřená záležitost. Samotnou realizaci formuláře lze provést několika způsoby. Během vývoje PDF formulářů firma Adobe používala více technologií. Většina těchto technologií využívala servery k získání odpovědí od uživatelů. Tyto servery již byly odstaveny, takže se dané technologie dají využít jen ve velmi omezené míře. Tyto systémy nejsou vytvořeny tak, aby bylo snadné automaticky nahrávat odpovědi do databáze. Adobe předpokládá, že bude autor formulářů odpovědi od uživatelů sbírat pomocí grafického programu \emph{Acrobat Reader} a dále je konvertovat třeba do tabulek \emph{Excel}. Adobe se snaží tyto technologie navrhovat pro podnikatele a obchodníky. K jejich využití tedy uživatel nepotřebuje skoro žádné znalosti. Prvním programem na tvorbu formulářů od Adobe byl \emph{Acrobat Forms Data Format Toolkit}, který má bezplatnou licenci.
+\subsection{Acrobat FDF Toolkit}
+FDF neboli Forms Data Format je formát navržený firmou Adobe. Slouží k uložení dat vyplněných do formuláře v souboru PDF. Uživatel vyplní formulář a pak místo uložení celého souboru uloží odděleně soubor s koncovkou \emph{fdf}, který obsahuje pouze identifikátory polí a uživatelův vstup. Tento malý soubor může uživatel odeslat na server, kde je díky znalosti souboru PDF, ze kterého byl soubor FDF vytvořen, možné zjistit, co uživatel vyplnil. K největší úspoře dochází ve chvíli, kdy je soubor PDF velký, protože nemusíme zbytečně odesílat celý jeho obsah na server, ale stačí jen malý soubor s odpověďmi. Adobe se navíc pokusilo tímto formátem do jisté míry přiblížit webovým formulářům. Firma Adobe umožňuje zakoupení a instalaci serverového softwaru, který přijímá přes internet FDF soubory od uživatelů, kteří formulář vyplnili. Uživateli se v \emph{Adobe Readeru} objeví možnost odeslání formuláře. Tento způsob se zdá velmi chytrý, Adobe od něj však upustilo a je udržován spíše kvůli zpětné kompatibilitě. Jsem přesvědčen o tom, že většina uživatelů o této vlastnosti PDF formulářů neví a jednou z důležitých vlastností, které by mělo mé řešení splňovat je intuitivnost, proto jsem od tohoto řešení upustil.
+
+\subsection{Acrobat LiveCycle Designer}
+Dalším vývojovým stádiem Adobe formulářů byl \emph{LiveCycle Designer}. Cílem tohoto programu bylo vytvořit PDF soubory, které uvnitř obsahují text ve formátu XML. Tyto formuláře se nazývají XFA forms. Designer umožňuje rozšířit schopnosti takových souborů přidáním funkčního kódu v jazyce JavaScript nebo skriptovacího jazyka FormCalc, který navrhlo samotné Adobe. Formuláře vytvořeny pomocí \emph{LiveCycle Designer} však nejsou kompatibilní s jinými programy od firmy Adobe. Mohou být samozřejmě vyplněny, ale ne již změněny. \emph{LiveCycle Designer} byl součástí programu Adobe Acrobat až do verze X. Po této verzi se Adobe rozhodlo prodávat \emph{LiveCycle Designer} jako samostatný produkt. To způsobilo mnoho nepříjemností uživatelům, kteří o této změně nevěděli a aktualizovali svůj Adobe Acrobat z verze X na verzi XI, protože jim byl během instalace \emph{LiveCycle Designer} odinstalován. Adobe neumožňuje verzi programu downgradovat a to znamenalo, že tito uživatelé již nemohli své formuláře nijak upravovat dokud si od firmy Adobe nezakoupili i samostatnou licenci na \emph{LiveCycle Designer}. To samozřejmě vzbudilo vlnu odporu, a tak Adobe začalo umožňovat jednorázové získání licence \emph{LiveCycle Designer} pro uživatele, kteří zakoupili produkt Adobe Acrobat před datem 15. října 2012 \cite{Adobe_LVD}\cite{Adobe_LVD_forum}.
+\subsection{FormsCentral}
+\emph{FormsCentral} byl poslední pokus Adobe k ovládnutí trhu s online formuláři. Tento program se, jako i oba předchozí, soustředil na možnost vyplnění PDF formuláře přímo na webu a použití externích serverů na ukládání odpovědí. Při vytvoření firma Adobe očekávala, že bude o takovou službu mnohem větší zájem, než který ve skutečnosti vznikl. Adobe však pomocí \emph{FormsCentral} nenabídlo uživatelům takové změny, za které by stálo na novou platformu přejít. Nezájem způsobil to, že byla i tato služba ukončena 28. července 2015. Ještě před ukončením se na trhu objevilo více dalších služeb, které nabízí naprosto stejné vlastnosti a dokonce umožňují i naimportovat již stávající tabulky z \emph{FormsCentral}\cite{Adobe_FormsCentral}.
+
+\subsection{Alternativy FormsCentral třetích stran}
+Samotná firma Adobe na svých stránkách, které se zabývají přerušením služby \emph{FormsCentral} doporučuje, aby uživatele přešli na jednu z alternativ. Nejpopulárnější podle nich jsou \emph{Formstack}, \emph{JotForm}, \emph{Survey Monkey} a \emph{WuFoo}. Některé z těchto služeb umožňují hostování serveru na ukládání odpovědí zdarma, do určitého limitu počtu uložených odpovědí \cite{Adobe_FormsCentral}. 
+Pro tuto práci by ale nebylo ideální, kdyby byla závislá na službách třetí strany, které by mohly postupem času skončit. Navíc se tyto služby soustředí na vyplňování formulářů online a to je již realizováno na webových stránkách TSD pomocí webového formuláře. Hlavním cílem této práce je navrhnout formuláře, které jdou vyplnit i bez připojení k internetu a následně je možné je přes webové stránky pouze nahrát. Proto se nebudu ve své práci těmito webovými servery nadále zabývat.
+
+\section{PDFLib}
+\emph{PDFlib} je jeden z nejrozšířenějších a nejúspěšnějších nástrojů na vytváření a úpravu souborů ve formátu PDF. Jeho hlavním cílem je tvorba dynamických souborů, které obsahují data z databáze, pomocí webového serveru nebo libovolných serverových systémů. Je realizován jako knihovna pro PHP. Povedlo se jí zjednodušit práci se soubory PDF, a tak umožňuje, aby se programátor soustředil na skládání komponent na stránku místo procházení komplikovaného formátu PDF. Knihovna PDFlib je na trhu již od roku 1997 a nabízí velký sortiment různých balíčků. Tato knihovna je placená. Nejlevnější je základní verze pro osobní počítač, která v současné době stojí \euro 375. Pokud chce však uživatel využít tuto knihovnu na strojích IBM nebo Oracle, zaplatí za licenci až \euro 3990, a to jen za základní verzi, která se soustředí především na vytváření souborů. Firma \emph{PDFlib GmbH}, která tuto knihovnu poskytuje nabízí i další pěkné služby. Patří mezi ně například knihovna PDI, která se soustředí na importování. Umožňuje tedy vzít již existující PDF dokument a přidat do něj další stránky, také umožňuje přidat záhlaví a zápatí nebo vložit vodoznak a jinou grafiku. Tato knihovna samozřejmě již nedokáže měnit stávající obsah nebo interagovat s dynamických obsahem. A to jsou právě vlastnosti, které jsou pro nás důležité. Další knihovna od této firmy se nazývá \emph{TET}, což je zkratka pro Text and Image Extraction Toolkit. Jak již název naznačuje, tato knihovna se zabývá extrakcí textu, obrázků a metadat ze souborů formátu PDF. Obrázky jsou uloženy v běžných grafických formátech, zatímco texty tato knihovna ukládá jako speciální XML soubory, kterým se říká \emph{TETML}. \emph{TET} toho docílí za pomoci analytických algoritmů, které zjišťují umístění a formátování textu. Poslední knihovna od firmy \mbox{\emph{PDFlib GmbH}}, která stojí za zmínku se jmenuje PLOP a zabývá se linearizací, optimalizací a ochranou PDF souborů. Linearizace vizuálně urychluje stažení PDF souboru, klientovi se nejdříve odešlou nejdůležitější informace a PDF se tedy zobrazí v kratším čase, než kdyby bylo odesláno klasickým způsobem. Uživatel tedy může prohlížet dokument dříve, než má stažená všechna data. Zbytek dat se stáhne na pozadí. Optimalizace je u PDF velmi užitečná, protože dva stejné PDF soubory mohou mít naprosto rozdílné velikosti. PLOP dokáže takové soubory projít a smazat veškeré redundantní informace. Tím docílí menší velikosti souborů, aniž by snížil kvalitu. Co se zabezpečení týče, mohou mít PDF soubory nastaveny zámky například na tisk nebo extrakci dat. Tento nástroj dokáže zámky odemknout a daný obsah zpřístupnit. Uživatel musí samozřejmě znát heslo nebo vlastnit certifikát jímž byl dokument uzavřen. PLOP dokáže navíc i projít poškozenou PDF strukturu a pokusit se jí opravit. S těmito dalšími knihovnami samozřejmě stoupá i cena licence. Firma PDFlib GmbH sice umožňuje stažení omezené verze PDFlib Lite 7, ale tato verze je spíše demonstrace toho, co dokáže plná verze. Navíc  firma ukončila vývoj a PDFlib Lite 7 není od roku 2010 udržován\cite{PDFlib}.
+
+Knihovna je psaná v jazyce C, lze ji však použít v mnoha jazycích. Mezi ty nejznámější patří ANSI C, ANSI C++, Java, .NET, Perl, Python a PHP. Samozřejmě je potřeba před použitím knihovnu různě upravit nebo obalit, to je však již přehledně popsáno v dokumentaci\cite{PDFlib_Manual}.
+
+  
+\section{FPDF}
+\emph{FPDF} je třída určená pro programovací jazyk PHP. Umožňuje generování PDF souborů pomocí čistého PHP, to znamená bez použití knihovny \emph{PDFlib}, která je psaná v jazyce C. F v názvu znamená "free". Tato třída je dostupná naprosto zdarma a může být využívána a upravována podle jakýkoliv potřeb. Knihovna \emph{FPDF} je lehčí verzí knihovny \emph{TCPDF}, obě zvládají podobné věci, ale TCPDF má funkcí více. Dokáže například interpretovat HTML. Protože je knihovna \emph{TCPDF} postavena na knihovně \emph{FPDF}, syntax kódu pro generování stránek se moc neliší \cite{FPDF}\cite{FPDF_Book}. 
+\subsection{FPDI}
+\emph{FPDI} je kolekce PHP tříd, které umožňují vývojářům číst stránky z již existujícího PDF dokumentu. Její využití je také zdarma. Ke svému běhu potřebuje knihovnu \emph{FPDF}\cite{FPDI}.
+\section{mPDF}
+Knihovna \emph{mPDF} je rozšíření předchozí knihovny \emph{FPDF}. Především se soustředí na generování PDF souborů z HTML. Na rozdíl od svého předchůdce dokáže tato knihovna již použít kódování UTF-8. \emph{mPDF} také dokáže aplikovat na dodané HTML kaskádové styly, a tak se přiblížit vzhledu, který by HTML kód měl, pokud by byl zobrazen v internetovém prohlížeči. Tyto vlastnoti jsou vykoupeny větší velikostí souborů a delším časem, který je potřeba pro generování souborů. \cite{mPDF}
+\section{DOMPDF}
+\emph{DOMPDF} se velmi podobná knihovně \emph{mPDF}, ale na rozdíl od \emph{mPDF}, která vychází z \emph{FPDF}, tato knihovna potřebuje ke své funkci nainstalovaný nástroj \emph{PDFlib}. Pokud uživatel tento nástroj nemá, může využít pro vytváření dokumentů přiloženou třídu \emph{R\&OS CPDF}. Generování dokumentů za pomoci této třídy je pomalejší a více paměťově náročné, ale je tím zaručeno, že \emph{DOMPDF} nebude závislá na žádné externí knihovně. Jelikož není v dokumentaci této knihovny žádná zmínka o kódování, předpokládám, že neumí kódovat UTF-8, proto považuji předchozí knihovnu za lepší volbu a k \emph{DOMPDF} bych se uchýlil jen ve chvíli, kdy by \emph{mPDF} nedokázalo vykreslit můj obsah podle představ.  \cite{DOMPDF}
+\section{Snappy}
+Další způsob generování PDF souborů v programovacím jazyce PHP je obalová knihovna \emph{Snappy}. Tato knihovna umožňuje snadné využití konzolové aplikace \emph{wkhtmltoPDF}. Nástroj \emph{wkhtmltoPDF}, jak již název napovídá, se využívá k převádění HTML na PDF. Knihovna \emph{Snappy} jej tedy obaluje, aby bylo možno tento nástroj snadno použít i v jazyce PHP. Programu stačí předat url a výstupem je soubor, který vypadá identicky jako stránka, která se na daném url nachází\cite{Snappy}\cite{wkhtmltoPDF}.
+\section{TCPDF}
+\emph{TCPDF} je třída v jayzce PHP určena ke generování PDF dokumentů a dodnes je nejpoužívanější. Je to hlavně díky tomu, že je využívána v mnoha populárních PHP aplikacích. \emph{TCPDF} původně vznikla jako odvětví třídy \emph{FPDF}, ale postupem času přibylo množství funkcí a dnes je skoro kompletně přepsána. Díky tomu, že je tak bohatě využívána, vzniklo na internetu velké množství návodů a příkladů, které budou při vývoji aplikací, které tuto třídu využívají, velmi užitečné. \emph{TCPDF} ke generování PDF dokumentů nepotřebuje žádné externí knihovny. Automaticky vytváří dokumenty ve správných formátech a následně umožňuje si tyto formáty libovolně přizpůsobit a definovat nap59klad vlastní okraje nebo jednotky měření. Třída \emph{TCPDF} zvládá generovat dokumenty v kódování UTF-8. Součástí této třídy jsou i nástroje pro zpětné importování existujících PDF dokumentů. Bohužel jsou stále ve vývoji a nemusíme jejich použitím dojít ke kýženým výsledkům. \cite{TCPDF} \cite{FPDF_Book}
+\section{PDF Parser}
+Pokud bychom chtěli importovat již existující PDF dokumenty, lepší cestou by byla PHP knihovna \emph{PDF Parser}. Je to opět rozšíření, postavené na knihovně \emph{TCPDF}, obohacené o další funkce. \emph{PDF Parser} lze dokonce vyzkoušet online. Stačí na stránky \emph{PDF Parseru} nahrát vaše PDF a okamžitě se vám v textovém souboru zobrazí co všechno byl schopný \emph{PDF Parser} z vašeho dokumentu získat\cite{PDF_Parser}. 
+\section{PDFToolkit}
+\emph{PDFtk} je jednoduchý grafický nástroj na rychlé spojování a rozdělování PDF dokumentů. Je naprosto zdarma. Obsahuje však i nástroj \emph{PDFtk Server}, který lze spustit z příkazové řádky. Mimo spojování a rozdělování má tento nástroj mnoho dalších užitečných funkcí, mezi které patří i extrakce dat. \emph{PDFtk} dokáže vypsat metadata z PDF, ale i obecně datová pole, která jsou v PDF uložena\cite{PDF_Toolkit}.
+\section{Závěr průzkumu}
+Došel jsem k závěru, že vytváření dynamických PDF dokumentů není v dnešní době problém. Existuje obrovské množství knihoven, tříd a nástrojů, které umožňují generování PDF dokumentů. Mnohem větší problém bude vytváření dokumentů, které by mohl uživatel snadno doplňovat. Technologie, které umožňují uživatelům vyplňování formulářů, se během existence formátu PDF neustále měnily. A protože je tento formát cílený na úředníky a obchodníky, kteří neradi aktualizují své zavedené systémy, jsou tyto technologie zpětně kompatibilní. Může se tedy stát, že dva naprosto identické dokumenty s formulářem mohou být interně realizovány naprosto rozdílným způsobem. Navíc nebyly tyto formuláře navrhnuty s úmyslem, že budou po vyplnění odesílány přes internet a dále zpracovány. Spíše šlo o ulehčení vyplnění před vytisknutím. Další možností bylo odesílání dat skrze \emph{Acrobat Reader} za použití speciálních serverů, které sbíraly odpovědi a umožňovali jejich pozdější konverzi do tabulek. Kvůli tomu má program \emph{Acrobat Reader} překvapivě rozsáhlé množství funkcí. Dokáže například provést kód \emph{JavaScirpt}, který byl do PDF dokumentu dopsán. Díky tomu se dokáže připojit a upravovat obsah databáze. V tomto smyslu se \emph{Acrobat Reader} přibližuje spíše internetovému prohlížeči, než jen základnímu průzkumníku PDF souborů. Moje první kroky budou směřovat k vytvoření vyplnitelných formulářů ve formátu PDF. Následně se pokusím z těchto souborů extrahovat obsah, který do něj uživatelé vyplnili. 
+\chapter{Implementace}
+TODO
+\chapter{Dokumentace}
+Konečná podoba mého modulu je realizován jako malá knihovna v jazyce PHP. Veškerý kód je rozdělen do dvou funkcí, jedna se zabývá generováním PDF dokumentu a druhá jeho zpracováním. Také se v této knihovně na začátku nachází překrytá definice třídy z knihovny \emph{TCPDF}. 
+\section{Třída PDFWithHeader}
+Při vytváření PDF dokumentů pomocí knihovny \emph{TCPDF} se nejdříve volá konstruktor třídy \emph{TCPDF}. Danému objektu se poté nastavují parametry a vlastnosti pomocí jeho funkcí. Pokud však chceme změnit záhlaví nebo zápatí, je zapotřebí překrýt funkce \texttt{Header} a \texttt{Footer}. V našem případě není zapotřebí zápatí, proto překrývám jen funkci \texttt{Header}. Informace v záhlaví mohou být pokaždé jiné. Toto dynamické záhlaví je ve tvaru ID : Name. Proto potřebujeme naší překryté třídě nějakým způsobem předat tyto dvě informace. Rozhodl jsem se k tomu použít konstruktor a tak jsem stávající konstruktor přetížil a přidal jsem 2 parametry - \texttt{Name} a \texttt{ID}. Tyto parametry se při volání konstruktoru uloží do vytvářeného objektu, podle návrhového vzoru přepravka a jsou poté zpřístupněny z funkce \texttt{Header}.
+\subsection{Funkce Header}
+\label{lst:Header}
+\begin{lstlisting}
+public function Header() {
+	$limit = 50;
+	if(mb_strlen($this->name, 'UTF-8') > $limit){
+		$this->name = mb_substr($this->name, 0, $limit, 'UTF-8')."... ";
+	} 
+	$this->SetFont('freesans', 'B', 20);
+	$firstWordWidth = TCPDF::GetStringWidth($this->id ." : ", 'freesans', 'B', 20, false);
+	$this->Cell($firstWordWidth, 0, $this->id ." : ", 0, 0, 'L', 0, '', 0, false, 'L', 'C');
+	
+	$this->SetFont('freesans', 'B', 15);
+	$this->Cell(0, 0, $this->name , 0, 0, 'L', 0, '', 0, false, 'L', 'C');
+	$this->Line(5, $this->y + 4, $this->w - 5, $this->y + 4);
+}
+\end{lstlisting}
+V této funkci nejdříve dojde ke zkrácení proměnné \texttt{name}. Tato proměnná obsahuje název článku a často se stává, že je název článku moc dlouhý. Text v záhlaví je vykreslován pomocí funkce \texttt{Cell}, tato funkce text nezalamuje, to znamená, že pokud bychom nezkontrolovali jeho délku, došlo by po vykreslení k tomu, že by text pokračoval i mimo stránku. Veškeré objekty, které jsou vykreslovány pomocí knihovny \emph{TCPDF} se vykreslují na současnou pozici ukazatele. Tento pomyslný ukazatel se poté postupně posouvá. Pokud chceme jeho pozici nastavit, slouží k tomu funkce \texttt{setX} a \texttt{setY}, pokud jsou tyto funkce použity se zápornými čísly, počítá se vzdálenost od pravé nebo spodní strany. Samotná funkce \texttt{Cell} má několik parametrů. 
+\subsubsection{Funkce Cell a její parametry}
+\begin{lstlisting}
+$PDF->Cell(w, h, txt , border, ln, align, fill, link, stretch, ignore_min_height, calign, valign);
+\end{lstlisting}
+První dva parametry odpovídají šířce a výšce buňky, která bude vykreslena. Základní hodnoty těchto parametrů jsou 0. Buňka s takovými parametry bude zabírat minimální výšku, do které se její obsah vejde, a maximální šířku. 
+Dalším parametrem je samozřejmě text, který má buňka obsahovat. 
+Poté následuje okraj. Tento parametr může nabývat číselných hodnot 0 a 1. Pokud je zvolena 1, je okraj buňky zvýrazněn černou čárou. Tato funkce je zvlášť užitečná při tvoření nových dokumentů, jelikož umožňuje zobrazení skutečného rozsahu dané buňky. Také je možné použít písmenné hodnoty L, T, R, B, které zobrazí okraj jen na jedné straně buňky. Písmena odpovídají anglickým názvům stran -- left, top, right a bottom. Například pokud bude parametrem řetězec "RTB", vykreslí se buňka, která bude mít okraj vpravo, nahoře a dole. Tyto písmena mohou být v řetězci v jakémkoliv pořadí.
+Parametr \texttt{ln} může nabývat hodnot 0 a 1. Tato možnost určuje, zda bude po vytisknutí buňky odřádkováno. Hodnota 1 je stejná jako volba 0 a okamžité použití funkce \texttt{Ln}. 
+Další parametr \texttt{align} slouží k zarovnání textu. Tento parametr může nabývat hodnot L, C, R, J. Text bude tedy zarovnán vlevo, vycentrován a nebo zarovnán vpravo. Písmeno J znamená \emph{justify} a skrývá se pod ním takzvané \emph{zarovnání do bloku}. 
+Parametr \texttt{fill} určuje, zda má být pozadí buňky průhledné nebo vyplněné. My budeme ve všech případech potřebovat, aby bylo průhledné, a tak bude nastaveno na \texttt{false}.
+Pokud bychom potřebovali použít buňku jako hypertextový odkaz, použijeme k tomu parametr link. Lze do něj dosadit URL nebo identifikátor objektu vytvořeného funkcí \texttt{AddLink}.
+Parametr \texttt{stretch} určuje chování textu v buňce a může nabývat pěti hodnot. Při hodnotě 0 je text zobrazen ve své velikosti a nedochází k žádnému zkreslení. Pokud je zadána hodnota 1, tak se text horizontálně zkrátí, pokud by se do dané buňky nevešel. Při hodnotě 2 se text přizpůsobí horizontálně velikosti buňky, i pokud by byl kratší. Pokud je zvolena hodnota 3, je dovoleno knihovně \emph{TCPDF} přizpůsobit i mezery mezi písmeny, tak aby se text do buňky vešel a při hodnotě 4 jsou tyto mezery zvětšeny tak, aby text zabíral celý prostor buňky. 
+Parametr \texttt{ignore\textunderscore min\textunderscore hight} lze použít, pokud chceme kreslit buňky menší než je jejich minimální výška, která je definovaná v knihovně \emph{TCPDF}. Tuto možnost také nebudeme potřebovat, takže ji necháme nastavenou na hodnotu \texttt{false}.
+Parametry \texttt{calign} a \texttt{valign} oba určují vertikální zarovnání. První určuje vertikální zarovnání buňky a druhý textu, který buňka obsahuje. Parametr \texttt{calign} může nabývat hodnot T, C, B, A, L, D a parametr \texttt{valign} jen hodnot T, C, B. Všechny možné kombinace, kterých se dá docílit, jsou přehledně zobrazeny v obrázku \ref{zarovnani}. Pokud se tedy snažíme zarovnat celou buňku, můžeme použít například písmeno T. Toto písmeno reprezentuje slovo "Top" a buňka bude zarovnána tak, že její horní hranice bude umístěna na pomyslné linii, vytvořené horizontálně z bodu od kterého obsah vykreslujeme. Ostatní písmena parametru \texttt{calign} reprezentují pozice "Center", "Bottom", "Ascent", "Baseline" a "Descent". Poslední tři pozice jsou určeny obsahem buňky. Jsou to linie nad textem, pod textem a linie na které je text vykreslován. Toto je velice užitečné pokud se snažíme zarovnat buňky s rozdílným nastavením písma a chceme, aby byl jejich obsah zarovnán na stejné úrovni. Parametr \texttt{valign} určuje pozici textu v buňce. Jednotlivá písmena reprezentují slova "Top", "Center" a "Bottom" a umožňují umístit text do buňky nahoru, doprostřed a nebo dolů.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{obr1.png}
+    \caption{Příklad vertikálního zarovnání buňky}
+    \label{zarovnani}
+\end{figure}
+
+\section{Generování dokumentu}
+Generování dokumentu probíhá ve funkci pojmenované \texttt{generate\textunderscore offline\textunderscore review\textunderscore form()}. Tato funkce má 6 parametrů. 
+\label{lst:Generovani}
+\begin{lstlisting}
+function generate_offline_review_form($rid, $reviewer_name, $sid, $submission_name, $submission_filename, $review_html_footer)
+\end{lstlisting}
+\subsection{Parametry}
+Parametr \texttt{rid} je identifikační číslo recenze. Portál TSD používá hned několik identifikačních čísel. Pro identifikaci uživatelů je používáno "User ID", pro identifikaci článků "Submission ID" a pro identifikaci recenzí "Review ID". \texttt{rid} je použito k propojení dat z PDF dokumentu a příslušným záznamem recenze v databázi. 
+Jak již název napovídá, \texttt{reviewer\textunderscore name} je parametr obsahující celé jméno recenzenta, který daný článek hodnotí. Nejedná se tedy o autora článku, ale většinou o uživatele, který daný dokument stahuje. Každý článek, který je uložen na stránkách TSD, má přiřazeno své "Submission ID" a "User ID" autora. Tyto články jsou hodnoceny několika recenzenty. Vznikají tak recenze, které jsou identifikovány pomocí "Review ID" a "User ID" autora recenze. Může se stát, že recenzent nebude schopen svoji recenzi nahrát do systému TSD a odešle ji administrátorovi webových stránek. Ten bude schopen tuto recenzi do systému nahrát i přestože není jeho. Parametr \texttt{reviewer\textunderscore name} se nachází v úvodním nadpisu i z důvodu, aby bylo okamžitě jasné, kdo danou recenzi vyplnil.
+Parametr \texttt{sid} je identifikační číslo článku. Toto číslo musí být identické při generování a poté zpětném nahrávání. Pokud by tyto čísla nebyla stejná, odhalila by to kontrola při nahrávání souboru a znamenalo by to problém v konzistenci dat. K této chybě by mohlo dojít, pokud by se například změnil obsah databáze poté, co byl soubor stažen a předtím, než byl do systému opět nahrán. Znamená to také, že článek ke kterému byla recenze vygenerovaná, byl mezitím odstraněn z databáze. Toto je chyba, kterou běžný uživatel neuvidí, protože současná webová stránka TSD ani neumožňuje nahrát recenzi neexistujícímu článku.  
+Parametr \texttt{submission\textunderscore name} je celý název článku, který daná recenze hodnotí. Pokud je tento název moc dlouhý tak, že by se nevešel do vyhrazeného místa, dojde ke zkrácení a zbytek textu bude nahrazen třemi tečkami. 
+Parametr \texttt{submission\textunderscore filename} je celá cesta k originálnímu dokumentu článku ve formátu PDF. Pokud by se v dané cestě nenacházel soubor ve formátu PDF, dojde pouze k vygenerování formuláře.
+Poslední parametr \texttt{review\textunderscore html\textunderscore footer} slouží k definici vlastního zápatí poslední stránky. Obsahem této proměnné musí být řetězec obsahující HTML kód. 
+\subsection{Generování}
+Funkce pro generování dokumentu využívá hned několik nástrojů. K vytváření nových dokumentů je použita knihovna \emph{TCPDF}, s již existujícími dokumenty je manipulováno pomocí nástroje \emph{PDFToolkit} a formulář je navržen pomocí nástroje \emph{Adobe FormsCentral}. 
+Ve funkci pro generování, která je zobrazena v kapitole \ref{lst:Generovani} jsou nejprve definovány názvy všech dočasných souborů, které budou následně využity. Poté dojde ke kontrole typu souboru článku. Pokud se jedná o PDF, tak dojde ke sloučení již existujícího souboru s formulářem a daného PDF souboru s článkem. Naopak pokud se o PDF soubor nejedná, tak bude kód funkce pokračovat pouze se samotným formulářem.
+\subsubsection{Sloučení}
+Při slučování dochází ke spojení dvou PDF dokumentů. Například pokud mám titulní stranu mé práce v dokumentu na obrázku \ref{titulni_strana} a chtěl bych ji sloučit s existujícím článkem, který je v dokumentu na obrázku \ref{clanek}.
+\begin{figure}[h]
+    \centering
+    \begin{minipage}[b]{0.4\textwidth}
+    	\includegraphics[width=\textwidth]{obr2.png}
+    	\caption{Dokument s titulní stranou}
+    	\label{titulni_strana}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.4\textwidth}
+    	\includegraphics[width=\textwidth]{obr3.png}
+    	\caption{Dokument s článkem}
+    	\label{clanek}
+    \end{minipage}
+\end{figure}
+Mohu k tomu použít příkaz nástroje \emph{PDFToolkit}.
+\begin{lstlisting}
+pdftk title.pdf submission.pdf cat output combined.pdf
+\end{lstlisting}
+Pokud dokument \texttt{title.pdf} je dokument z obrázku \ref{titulni_strana} a \texttt{submission.pdf} je dokument z obrázku \ref{clanek} pak výsledným dokumentem bude obrázek \ref{kombinace}
+\begin{figure}[h]
+    \centering
+    	\includegraphics[width=0.5\textwidth]{obr5.jpg}
+    	\caption{Výsledný dokument}
+    	\label{kombinace}
+\end{figure}
+\subsubsection{Prokládání}
+Dále je zapotřebí přidat záhlaví s informacemi o recenzi. K tomu je využita již výše zmíněná třída PDFWithHeader. Vytvoříme tedy jednu stránku s žádaným záhlavím a poté tento dokument vykreslíme. Máme tedy formulář s článkem v jednom dokumentu a záhlaví v druhém. Ke spojení použijeme nástroj PDFToolkit, který umožňuje prokládání již existujících dokumentů. Proložení je docíleno tímto příkazem. 
+\begin{lstlisting}
+pdftk withoutHeader.pdf multistamp header.pdf output combined.pdf
+\end{lstlisting}
+Pokud bychom se snažili prokládat dva soubory. Přičemž \texttt{withoutHeader.pdf} je dokument na obrázku \ref{withoutHeader} a \texttt{header.pdf} se podobá dokumentu na obrázku \ref{header}. Vznikl by dokument s názvem \texttt{combined.pdf}, který bude vypadat jako dokument na obrázku \ref{kombinace2}.
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}[b]{0.4\textwidth}
+    	\includegraphics[width=\textwidth]{obr5.png}
+    	\caption{Dokument bez záhlaví}
+    	\label{withoutHeader}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.4\textwidth}
+    	\includegraphics[width=\textwidth]{obr6.png}
+    	\caption{Záhlaví dokumentu}
+    	\label{header}
+    \end{minipage}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    	\includegraphics[width=0.8\textwidth]{obr7.png}
+    	\caption{Výsledný dokument}
+    	\label{kombinace2}
+\end{figure}
+\subsubsection{Nadpis}
+Následně se pomocí knihovny \emph{TCPDF} vytvoří další PDF soubor obsahující pouze hlavní nadpis. Tento soubor bude stejným způsobem proložen již existujícím PDF souborem obsahujícím formulář, článek a teď i záhlaví. Jelikož chceme, aby nástroj \emph{PDFToolkit} takto spojil jen první stránku, na které se nadpis nachází, je nutné, aby byl dokument s nadpisem ukončen prázdnou stránkou. \emph{PDFToolkit} totiž při prokládání postupuje po stránkách a pokud má dokument stránek méně, dojde k opakování poslední strany. Kdyby měl tedy soubor s nadpisem jen jedinou stránku, byl by tento nadpis proložen všemi stranami výsledného dokumentu, stejně jako tomu bylo u záhlaví. 
+
+V této chvíli jsme získali dokument s formulářem, připojeným článkem, záhlavím a nadpisem. Od finálního vzhledu nás dělí jen zápatí na poslední stránce. Opět tedy vytvoříme dokument pomocí knihovny \emph{TCPDF}. Tentokrát bude obsahovat dvě prázdné stránky, třetí stránku obsahující zápatí a ukončovací prázdnou stránku. Proložením získáme již kompletní dokument se všemi informacemi. Tomuto dokumentu je ještě zapotřebí upravit metadata. Nejdříve tedy použijeme \emph{PDFToolkit} na extrakci současných dat do souboru, k těmto datům poté přidáme identifikační čísla článku a recenze a tímto příkazem aktualizujeme metadata: 
+\begin{lstlisting}
+PDFtk withoutMeta.PDF update_info metafile.txt output withMeta.PDF
+\end{lstlisting}
+Výsledný soubor je již finální, a tak ho odešleme prohlížeči ke stažení.
+\section{Zpracování dokumentu}
+Zpracování dokumentu je realizováno touto funkcí s 3 parametry.
+\begin{lstlisting}
+function process_offline_review_form($rid, $sid, $revform_filename) 
+\end{lstlisting}
+\subsection{Parametry}
+Prví dva parametry, \texttt{rid} a \texttt{sid}, obsahují identifikační čísla článku a recenze. Jsou zde pouze pro kontrolu, zda uživatel nahrává správný soubor do správné recenze na webu TSD. Třetím parametrem je cesta k PDF dokumentu, který byl nahrán na server.
+\subsection{Zpracování}
+Při zpracování dojde nejprve k extrakci identifikačních čísel článku a recenze ze souboru. Tyto hodnoty jsou následně porovnány s čísly, které byly zadány jako parametry funkce pro zpracování. Pokud se liší číslo recenze, pravděpodobně se uživatel snaží pouze nahrát dokument s recenzí k jinému článku než zvolil ve webové aplikaci. Pokud se však liší číslo článku, jedná se o chybu konzistence. Nikdy by se totiž nemělo změnit identifikační číslo článku, bez změny čísla recenze. Po této kontrole jsou extrahována pomocí nástroje PDFToolkit datová pole. Výstup s informacemi o datových polích může vypadat například takto:
+\label{vystup}
+\begin{lstlisting}[basicstyle=\tiny]
+---
+FieldType: Button
+FieldName: Originality &#8211; Rate how origina_ir*LeqwssF5KR7JiEO01FA
+FieldFlags: 49152
+FieldValue: 1
+FieldJustification: Left
+FieldStateOption: 0
+FieldStateOption: 1
+FieldStateOption: 10
+FieldStateOption: 2
+FieldStateOption: 3
+FieldStateOption: 4
+FieldStateOption: 5
+FieldStateOption: 6
+FieldStateOption: 7
+FieldStateOption: 8
+FieldStateOption: 9
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: Internal comment (optional) &#8211; _rKkqBCjQ4mH7ygxrjhFaFw
+FieldNameAlt: Internal comment (optional) &#8211; An internal message for the organizers:
+FieldFlags: 4096
+FieldValue: Text kter&#253; je obsa&#382;en v textov&#233;m poli Intern&#237; koment&#225;&#345;.
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: fc-int01-generateAppearances
+FieldFlags: 5
+FieldJustification: Left
+\end{lstlisting}
+Jednotlivá datová pole jsou oddělena skupinou tří pomlček. A informace o datových polí jsou rozdělena pod klíčová slova jako \texttt{FieldType}, \texttt{FieldName} a \texttt{FieldValue}. Dojde tedy k parsování a výsledné pole hodnot je předáno další funkci, která komunikuje s databází. 
+\subsection{Parsování}
+TODO
+\subsection{Aktualizace hodnot v databázi}
+\sloppy
+Poslední funkce, která je při zpracování dokumentu použita se nazývá \texttt{upload\textunderscore to\textunderscore DB\textunderscore offline\textunderscore review\textunderscore form()}. Tato funkce nejdříve zkontroluje, zda jsou předané hodnoty korektní. Uživatel se může pokusit nahrát dokument s recenzí, která byla již označena jako uzavřená, proto je nejdřív získán současný stav recenze, kterou se snažíme aktualizovat. Pokud je stav vyhovující, dojde k uložení všech hodnot do databáze. 
+\chapter{Rozšiřitelnost}
+Ve složce se zdrojovým kódem je umístěn vyplnitelný formulář, který je používán při generování dokumentů. Pokud je tento dokument nahrazen jiným formulářem vytvořeným pomoci programu \emph{Adobe FormsCentral}, budou výsledné dokumenty obsahovat tento upravený formulář. Z toho důvodu složka obsahuje i soubor s koncovkou \emph{.fcdt}, jedná se totiž o šablonu, pomocí které byl první formulář vytvořen. Stačí tedy tento soubor otevřít pomocí \emph{Adobe FormsCentral}, provést změny a vygenerovat nový formulářový dokument ve formátu PDF. 
+\sloppy
+Při větších úpravách se však nevyhneme zásahům do kódu. Pokud se například změní počet polí, je nutné aktualizovat příkaz, který ukládá hodnoty do databáze. Veškerá práce s databází se nachází ve funkci \texttt{upload\textunderscore to\textunderscore DB\textunderscore offline\textunderscore review\textunderscore form()}. Také je nutné si uvědomit, že informační zápatí formuláře bude vždy vykresleno na třetí straně dokumentu. Pokud se tedy počet stránek formuláře změní, je nutné ubrat popřípadě přidat prázdné stránky z generovaného dokumentu obsahujícího zápatí.
+Druhý přístup, na který jsem bohužel přišel příliš pozdě, je generování celého formuláře pomocí knihovny \emph{TCPDF}. Když jsem při prvotním průzkumu tuto možnost zkoušel, nedokázal jsem najít způsob, jak získat data z formulářů vytvořených pomocí knihovny \emph{TCPDF}, to se mi podařilo až s formulářem vytvořeným pomocí \emph{Adobe FormsCentral}. Navíc jsem si v té době naplno neuvědomoval, jak bude můj modul v reálně nasazen. Až při testování jsem přišel na to, že \emph{PDFToolkit} dokáže zjistit obsah i datových polí vytvořených knihovnou \emph{TCPDF}. Jsem přesvědčen o tom, že tento přístup je korektnější, proto se v této části pokusím vysvětlit postup, jak navrhnout vyplnitelné formuláře pomocí knihovny \emph{TCPDF}.
+\section{Formuláře v TCPDF}
+Tvorba formulářů knihovnou \emph{TCPDF} je opravdu jednoduchá. Velmi se podobá tvorbě klasických statických dokumentů. Nejprve je nutné vytvořit objekt \texttt{TCPDF}, do kterého můžeme následně začít vykreslovat buňky s textem.
+\begin{lstlisting}
+$PDF = new TCPDF();
+$PDF->AddPage();
+$PDF->SetFont('helvetica', 'BI', 18);
+$PDF->Cell(0, 5, 'Priklad formulare', 0, 1, 'C');
+$PDF->Ln(10);
+\end{lstlisting}
+Funkce \texttt{Cell} vykreslí na současnou pozici text "Priklad formulare" a poté dojde k odřádkování pomocí funkce \texttt{Ln}. Pomocí knihovny \emph{TCPDF} je dále možné vytvořit textová pole, přepínače, zatrhávací políčka nebo například tlačítka. Všem těmto prvkům je přiřazeno jméno, díky kterému je možné s obsahem manipulovat pomocí \emph{JavaScriptu}. To lze například využít k validaci ze strany uživatele. 
+\subsection{Příklad validace formuláře pomocí JavaScripu}
+TODO
+\subsection{Tvorba formuláře}
+Pokud bychom chtěli přizpůsobit vzhled formuláře, můžeme k tomu použít funkci \texttt{setFormDefaultProp}, která nám umožní definovat vlastní okraje nebo například barvu textových polí. 
+\begin{lstlisting}
+$PDF->setFormDefaultProp(array('lineWidth'=>1, 'borderStyle'=>'solid', 'fillColor'=>array(255, 255, 200), 'strokeColor'=>array(255, 128, 128)));
+\end{lstlisting}
+Dále do dokumentu přidáme formulářové prvky. Pro vytvoření textového pole použijeme funkci \texttt{TextField}. Nejdříve přidáme popis textového pole, za něj vykreslíme samotné textové pole a poté opět odřádkujeme.
+\begin{lstlisting}
+$PDF->Cell(35, 5, 'Textove pole:');
+$PDF->TextField('field01', 50, 5);
+$PDF->Ln(6);
+\end{lstlisting}
+První parametr funkce \texttt{TextField} je identifikátor. Ten je následován šířkou a výškou textového pole. Poté do dokumentu přidáme seznam, pomocí funkce \texttt{ComboBox}.
+\begin{lstlisting}
+$PDF->Cell(35, 5, 'Vyberove pole:');
+$PDF->ComboBox('field02', 30, 5, array(array('', '-'), array('M', 'Muz'), array('Z', 'Zena')));
+$PDF->Ln(6);
+\end{lstlisting}
+První parametry jsou totožné, čtvrtý parametr je pole polí, které obsahuje všechny možnosti, které může uživatel při vyplňování zvolit. Dále přidáme několik přepínačů.
+\begin{lstlisting}
+$PDF->Cell(35, 5, 'Prepinace:');
+$PDF->RadioButton('field03', 5, array(), array(), 'Zvolil 1');
+$PDF->Cell(35, 5, 'Jedna');
+$PDF->Ln(6);
+$PDF->Cell(35, 5, '');
+$PDF->RadioButton('field03', 5, array(), array(), 'Zvolil 2', true);
+$PDF->Cell(35, 5, 'Dva');
+$PDF->Ln(6);
+$PDF->Cell(35, 5, '');
+$PDF->RadioButton('field03', 5, array(), array(), 'Zvolil 3');
+$PDF->Cell(35, 5, 'Tri');
+$PDF->Ln(6);
+\end{lstlisting}
+Pokud chceme, aby měl uživatel na výběr z několika možností, je důležité aby měly přepínače stejný identifikátor. Druhý parametr funkce \texttt{RadioButton} je velikost přepínače, ta je následována poli, ve kterých je možné upřesnit vlastnosti a parametry, které lze využít při práci s \emph{JavaScriptem}. Jelikož my v našem formuláři \emph{JavaScript} nepoužijeme, můžeme toto pole nechat prázdné. Pátý parametr je hodnota, která bude uložena při zvolení dané možnosti. Jako šestý parametr je možné zadat výchozí hodnotu. V našem případě bude po otevření souboru předem zvolena druhá možnost. Další prvek, který můžeme do našeho formuláře přidat, je zaškrtávací políčko:
+\begin{lstlisting}
+$PDF->Cell(35, 5, 'Zaskrtavaci policko:');
+$PDF->CheckBox('field04', 5, true, array(), array(), 'Zaskrtnuto');
+$PDF->Ln(6);
+\end{lstlisting}
+Zaškrtávací políčko se podobá přepínači, pouze je změněno pořadí a výchozí stav pole je definován jako třetí parametr místo šestého. Poté, co vytvoříme pomocí předchozích funkcí náš formulář, je ještě nutné definovaný obsah vykreslit. K tomu použijeme funkci \texttt{Output}.
+\begin{lstlisting}
+$PDF->Output('formular.PDF', 'D');
+\end{lstlisting}
+Druhý parametr této funkce určuje, kam má být výsledný dokument odeslán. Pokud je zvoleno \texttt{D}, bude soubor odeslán webovému prohlížeči. Druhá možnost je například zvolit \texttt{F}, poté bude soubor uložen lokálně na serveru.
+Dokument, který je vytvořen tímto skriptem, je poté možno opět umístit do složky s modulem, který ho začne využívat ke generování dokumentů s recenzí. Poté je opět nutno zkontrolovat obsah pole, které vznikne po parsování výstupu nástroje \emph{PDFToolkit} a přizpůsobit mu funkci pro ukládání hodnot do databáze.
+\chapter{Testování}
+Vytvořený modul bylo nutné také otestovat. 
+\section{Kompatibilita}
+\subsection{Webové prohlížeče}
+Nejprve jsem se rozhodl otestovat kompatibilitu s různými internetovými prohlížeči. Prvním prohlížečem, který jsem testoval byla \emph{Mozilla Firefox} verze 47.0.1. V tomto prohlížeči proběhlo vše správně, po stažení souboru se objeví dialogové okno prohlížeče, které umožňuje uživateli otevřít soubor PDF v doporučeném programu \emph{Acrobat Reader}. A zpětné nahrání opět proběhlo bez problému. Dalším prohlížečem byl \emph{Microsoft Edge 40}, který je v dnešní době nainstalován jako výchozí prohlížeč na počítačích používajících operační systém \emph{Microsoft Windows 10}. I prohlížeč \emph{Edge} neměl se stažením a zobrazením nejmenší problém. Poté jsem stažení otestoval i na prohlížeči \emph{Internet Explorer 11}. Ten, podobně jako \emph{Edge}, zobrazil dialogové okno, které umožnilo otevření dokument v programu \emph{Acrobat Reader}. Jako poslední jsem otestoval nejpoužívanější prohlížeč \emph{Google Chrome} verze 57.0. U něj jsem narazil na problém. \emph{Google Chrome} totiž umožňuje zobrazení obsahu PDF dokumentů ve vestavěném prohlížeči. Poté co jsem se pokusil otevřít stažený dokument, otevřela se nová záložka, ve které se dokument s formulářem zobrazil. Tento vestavěný prohlížeč dokonce umožňuje i vyplnění obsahu formuláře. Vyplněná data by se měla ukládat do souboru, jelikož však \emph{Google Chrome} otevírá jen náhled, není možné otevřený soubor měnit. Pokud by uživatel chtěl vyplnit recenzi online, je k tomu na stránkách TSD určen webový formulář, proto nedává smysl vyplňování offline PDF furmuláře pomocí webového prohlížeče. Aby nedocházelo k nedorozumění, byl do záhlaví PDF formuláře raději přidán informační text, který upozorňuje uživatele, aby formuláře raději vyplnil pomocí programu \emph{Acrobat Reader}.
+\subsection{Editory}
+Vyplnění formuláře bylo otestováno jak v bezplatné verzi programu \emph{Acrobat Reader DC 17.9}, tak v placené verzi \emph{Adobe Acrobat 11}. Obě verze umožnily bezproblémové vyplnění a uložení formuláře. Otestoval jsem i speciální znakové sady. Pokud chce uživatel vyplnit formulář například v angličtině nebo češtině, nedochází k žádnému problému. Uživatel může dokonce do formuláře vložit i speciální znaky, které se nacházejí v UTF-8. Při psaní těchto znaků si program Acrobat Reader sám dohledá a nainstaluje potřebné rozšíření. To, co je možné do formuláře vyplnit, není tedy omezeno formátem souboru, ale spíše verzí a rozšířením programu Acrobat Reader, kterým uživatel dokument vyplňuje. Co se týče velikosti, je tento formát skoro bez omezení. Uživatel může do textových polí vložit klidně několik stránek textu a nedojde k žádnému drastickému snížení rychlosti. 
+TODO Evince
+\section{Generování a nahrávání}
+Při testování generování a nahrání mě zajímala především rychlost. Autoři článků, mohou do databáze uložit soubory o libovolné velikosti. Obával jsem se, že pokud budou tyto články, které se připojují k formuláři, moc velké, dojde ke zpomalení. To se však nestalo. Zpracování bylo otestováno s PDF souborem o velikosti 10 MB. Ke zpomalení došlo spíše kvůli internetovým připojením než samotnou prací mého modulu. 
+\section{Odhalené chyby}
+Během testování bylo odhaleno několik chyb. Ty nejzajímavější jsem se rozhodl popsat v této sekci.
+\subsection{Diakritika v nadpisu}
+Při vytváření textů jsem se soustředil na to, aby bylo možné vygenerovat dokumenty s českou diakritikou. Formuláře, které jsem generoval, měly v nadpisu mé jméno, které obsahovalo písmeno \uv{á}. Až pozdější testy ukázaly, že skript nedokázal vykreslit všechny diakritické znaky české abecedy. Naštěstí to nebyl problém v kódování, ale v použitém fontu. Základní fonty, které knihovna \emph{TCPDF} používá jsou:
+\begin{itemize}
+\item courier : Courier
+\item courierB : Courier Bold
+\item courierBI : Courier Bold Italic
+\item courierI : Courier Italic
+\item helvetica : Helvetica
+\item helveticaB : Helvetica Bold
+\item helveticaBI : Helvetica Bold Italic
+\item helveticaI : Helvetica Italic
+\item symbol : Symbol
+\item times : Times New Roman
+\item timesB : Times New Roman Bold
+\item timesBI : Times New Roman Bold Italic
+\item timesI : Times New Roman Italic
+\item zapfdingbats : Zapf Dingbats
+\end{itemize}
+Žádný z nich však neobsahuje znaky pro českou diakritiku. Naštěstí je součástí knihovny \emph{TCPDF} více fontů, o kterých v dokumentaci není zmínka. Fonty \emph{freesans} a \emph{freeserif} dokáží zobrazit i českou diakritiku, a tak jsou ideální pro náš modul. Pokud je nutné generovat české texty, doporučuji jejich využití. \emph{freesans} je bezpatkové písmo a \emph{freeserif} je patkové.
+\subsection{Speciální znaky ve formuláři}
+Program \emph{Acrobat Reader} umožňuje uživateli vyplnit do formuláře jakékoliv znaky. Při testování jsem zjistil, že tyto znaky nemusí být kompatibilní s nastavením tabulky v databázi, a proto jsem přidal kontrolu. Při neúspěchu se uživateli zobrazí chybová hláška. Tato chyba však nastane jen ve velmi extrémních případech, když se uživatel snaží vyplnit do formuláře například emotikony a jiné neobvyklé znaky. 
+\subsection{Nekorektně vyplněný formulář}
+V první verzi mého modulu mohl uživatel vyplnit svůj formulář jakkoliv. Při nahrávání poté došlo k přepisu původní verze recenze tou novou. To, že mohl uživatel nahrát i formulář jen s jedním vyplněným polem, by mohlo být potenciálně matoucí. Uživatel by mohl předpokládat, že nahráním dalšího formuláře, který obsahuje ostatní pole, dojde ke sloučení. Ve skutečnosti však dojde k přepsání původní odpovědi odpovědí novou. Z toho důvodu jsem raději přidal kontrolu, která zjišťuje, zda byl formulář vyplněn kompletně a žádná povinná pole nebyla vynechána. Současně jsem také přidal kontrolu rozsahu hodnot odpovědí. Uvědomil jsem si totiž, že pokud má uživatel na výběr z rozsahu hodnot 1-10, je možné upravit formát souboru a nahrát tak číslo mimo toto rozsah, i pokud mu to neumožňuje vzhled formuláře. 
+\subsection{Nahrání jiného PDF}
+Další chyba, která byla odhalena až testováním, bylo zvolení PDF, které nebylo vygenerováno jako recenze pro článek TSD. Když jsem vytvářel první verzi, tak jsem si neuvědomil, že by se uživatel mohl pokusit nahrát soubor, který neobsahuje námi vygenerovaný formulář PDF. Samozřejmě by tím ničeho nedocílil, protože by soubor nešel zpracovat, modul by však selhal s jinou chybovou hláškou, a tak by mohl uživatele zmást. Přidal jsem tedy další chybovou hlášku, která uživatele informuje o nahrání nekorektního souboru. 
+\subsection{Špatný posun při parsování}
+Chyba, která se hledala nejhůře, byla chyba v parsování textu. Byla to současně chyba, na kterou jsem přišel až poměrně pozdě. Parsování textu totiž na první pohled vypadalo funkčně a bezchybně. Velké množství testů prošlo bez problémů, pouze jediný měl zvláštní výsledek. V tomto testu byla vyplněna všechna pole až na pole předposlední. Při nahrání tohoto formuláře do databáze došlo k duplikaci poslední hodnoty i na místo předposlední. Díky tomuto testu jsem si uvědomil, že můj cyklus může v tomto speciálním případě načíst hodnotu nesprávného pole. Modul jsem opět upravil tak, aby ukládal i nevyplněná pole z formuláře. 
+\subsection{Injekce obsahu buněk}
+Častý problém s parsováním textu je ten, že pokud umožníte uživateli zadat libovolný řetězec, není možné zajistit, aby došlo ke správnému parsování ve sto procentech případů. Parsování se totiž řídí speciálními znaky a nebo řetězci, které mohou být obsaženy i v úsecích textu, které se snažíte získat. V praxi je tento problém řešet takzvaným escapováním znaků. Pokud chce uživatel zadat daný speciální znak, aniž by byl použit, je možné před něj umístit escapovací symbol. Při jednom z testů jsem se tedy pokusil vyplnit do textových polí vstup, který generuje nástroj PDFToolkit jako výstup. Ukázka tohoto výstupu je v kapitole \ref{vystup}. Tento test mi ověřil, že pokud by uživatel zadal tři pomlčky, ukončil by tím dané pole a zbytek vstupu by se již nedal načíst. Naštěstí se mi povedlo tuto chybu opravit. PDFToolkit totiž umí reprezentovat konce řádek jako xml speciální znaky. Při vygenerování vstupu tedy dokáži rozlišit konce řádek, které vytvořil PDFToolkit a které vytvořil uživatel. Tento rozdíl mi umožnil přizpůsobit parser tak, aby nebylo možné vyplnit do polí takový text, který by nebylo možné zpracovat.
+\subsection{Obecné testování}
+Před zprovozněním celého modulu mi vedoucí práce umožnil vyzkoušet generování formulářů na již naplněné databázi. Při těchto testech bylo odhaleno, že u jedné konkrétní verze nadpisu byl limit počtu písmen moc velký a došlo k zalomení. Dokument je i přesto čitelný, ale z důvodů jednotnosti vzhledu jsem limit snížil tak, aby všechny nadpisy zůstaly na jedné řádce. Také jsme zjistili, že někteří uživatelé při zaslání článku nenahráli soubor ve formátu PDF. Proto byl modul upraven, aby v takovém případě umožnil alespoň stažení formuláře, bez přiloženého článku. Otestoval jsem desítky článků a tyto dvě chyby byly jediné. Generování a následné zpracování ostatních článků bylo bezproblémové.
+\chapter{Závěr}
+
+% PRO ANGLICKOU SAZBU JE NUTNÉ ZMĚNIT
+% CITAČNÍ STYL!
+%
+\bibliographystyle{csplainnatkiv}
+{\raggedright\small
+\bibliography{literatura}
+}
+
+\end{document}
