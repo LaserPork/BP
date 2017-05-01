@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.12)  30 APR 2017 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.12)  1 MAY 2017 18:42
 entering extended mode
 **./vzor_prace.tex
 (vzor_prace.tex
@@ -797,150 +797,157 @@ Kapitola 1.
 
 ] [8] [9] [10] [11] [12] [13] [14]
 Kapitola 2.
-[15
-
-]
-Kapitola 3.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 165.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 159.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 171.
- [16
+) [15
 
-]
-<obr1.png, id=379, 1013.28563pt x 558.58687pt>
+] [16]
+Kapitola 3.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 169.
+[17
+
+] <obr1.png, id=383, 1013.28563pt x 558.58687pt>
 File: obr1.png Graphic file (type png)
  <use obr1.png>
-Package pdftex.def Info: obr1.png used on input line 200.
+Package pdftex.def Info: obr1.png used on input line 198.
 (pdftex.def)             Requested size: 290.21811pt x 159.98306pt.
- [17]
-Overfull \hbox (80.37471pt too wide) in paragraph at lines 206--208
+ [18]
+Overfull \hbox (80.37471pt too wide) in paragraph at lines 204--206
 \T1/lmr/m/n/12 Generování do-ku-mentu pro-bíhá ve funkci po-jme-no-vané \T1/lmt
 t/m/n/12 generate_offline_review_form()\T1/lmr/m/n/12 .
  []
 
-[18 <./obr1.png>] [19] <obr2.png, id=406, 274.77657pt x 311.66437pt>
+[19 <./obr1.png>] [20] <obr2.png, id=410, 274.77657pt x 311.66437pt>
 File: obr2.png Graphic file (type png)
 
 <use obr2.png>
-Package pdftex.def Info: obr2.png used on input line 226.
+Package pdftex.def Info: obr2.png used on input line 224.
 (pdftex.def)             Requested size: 154.78062pt x 175.56282pt.
- <obr3.png, id=407, 612.03656pt x 672.26157pt>
+ <obr3.png, id=411, 612.03656pt x 672.26157pt>
 File: obr3.png Graphic file (type png)
  <use obr3.png>
-Package pdftex.def Info: obr3.png used on input line 232.
+Package pdftex.def Info: obr3.png used on input line 230.
 (pdftex.def)             Requested size: 154.78062pt x 170.00371pt.
 
-<obr5.jpg, id=411, 596.98032pt x 657.2053pt>
+<obr5.jpg, id=415, 596.98032pt x 657.2053pt>
 File: obr5.jpg Graphic file (type jpg)
  <use obr5.jpg>
-Package pdftex.def Info: obr5.jpg used on input line 244.
+Package pdftex.def Info: obr5.jpg used on input line 242.
 (pdftex.def)             Requested size: 193.47874pt x 212.99753pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./obr2.png> <./obr3.png>]
-Overfull \hbox (4.45383pt too wide) in paragraph at lines 253--254
+[21 <./obr2.png> <./obr3.png>]
+Overfull \hbox (4.45383pt too wide) in paragraph at lines 251--252
 \T1/lmr/m/n/12 Pokud bychom se sna-ºili pro-klá-dat dva sou-bory. P°i-£emº \T1/
 lmtt/m/n/12 withoutHeader.pdf
  []
 
-<obr5.png, id=427, 710.655pt x 573.64313pt>
+<obr5.png, id=431, 710.655pt x 573.64313pt>
 File: obr5.png Graphic file (type png)
  <use obr5.png>
-Package pdftex.def Info: obr5.png used on input line 258.
+Package pdftex.def Info: obr5.png used on input line 256.
 (pdftex.def)             Requested size: 154.78062pt x 124.94142pt.
 
-<obr6.png, id=428, 639.13782pt x 531.48563pt>
+<obr6.png, id=432, 639.13782pt x 531.48563pt>
 File: obr6.png Graphic file (type png)
  <use obr6.png>
-Package pdftex.def Info: obr6.png used on input line 264.
+Package pdftex.def Info: obr6.png used on input line 262.
 (pdftex.def)             Requested size: 154.78062pt x 128.71074pt.
 
-Underfull \hbox (badness 1688) in paragraph at lines 265--265
+Underfull \hbox (badness 1688) in paragraph at lines 263--263
 []\T1/lmr/m/n/12 Obrázek 3.6: []Záhlaví do-ku-
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<obr7.png, id=429, 716.6775pt x 572.89032pt>
+<obr7.png, id=433, 716.6775pt x 572.89032pt>
 File: obr7.png Graphic file (type png)
  <use obr7.png>
-Package pdftex.def Info: obr7.png used on input line 271.
+Package pdftex.def Info: obr7.png used on input line 269.
 (pdftex.def)             Requested size: 309.56717pt x 247.45695pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./obr5.jpg>] [22 <./obr5.png> <./obr6.png>]
+[22 <./obr5.jpg>] [23 <./obr5.png> <./obr6.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 294.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 296.
+(Font)              <10> on input line 292.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 292.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 292.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 294.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 296.
- [23 <./obr7.png>]
-[24]
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 294.
+ [24 <./obr7.png>]
+[25] [26]
 Kapitola 4.
-[25
+[27
 
-] [26] [27] [28]
+] [28] [29] [30]
 Kapitola 5.
-[29
+[31
 
 ]
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 408.
- [30] [31] [32] (vzor_prace.bbl [33]
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 439.
+ [32] [33] [34] [35]
+Kapitola 6.
+(vzor_prace.bbl [36
+
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 13.
- [34
+ [37
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 448.
- [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 448.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 478.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 478.
  (vzor_prace.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 448.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 448.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 478.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 478.
 Package rerunfilecheck Info: File `vzor_prace.out' has not changed.
-(rerunfilecheck)             Checksum: B2BC58B1097DF155EDD862E06C691F4B;6642.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 448.
+(rerunfilecheck)             Checksum: 88639E67388BCA001185E1FCCD06F241;6676.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 478.
  ) 
 Here is how much of TeX's memory you used:
- 14401 strings out of 493333
- 205103 string characters out of 3139194
- 401868 words of memory out of 3000000
- 17558 multiletter control sequences out of 15000+200000
- 81614 words of font info for 54 fonts, out of 3000000 for 9000
+ 14473 strings out of 493333
+ 206128 string characters out of 3139194
+ 420868 words of memory out of 3000000
+ 17588 multiletter control sequences out of 15000+200000
+ 99067 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,9n,40p,3432b,3679s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,9n,40p,4342b,3679s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmri7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmtt12.pfb>
-Output written on vzor_prace.pdf (35 pages, 973878 bytes).
+/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr1
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmri8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt
+12.pfb>
+Output written on vzor_prace.pdf (38 pages, 1016642 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
- 210 named destinations out of 1000 (max. 500000)
+ 761 PDF objects out of 1000 (max. 8388607)
+ 248 named destinations out of 1000 (max. 500000)
  428 words of extra memory for PDF output out of 10000 (max. 10000000)
 
