@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.12)  1 MAY 2017 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.12)  2 MAY 2017 21:39
 entering extended mode
 **./vzor_prace.tex
 (vzor_prace.tex
@@ -621,15 +621,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 90.
-Package hyperref Info: Option `unicode' set `true' on input line 90.
+Package hyperref Info: Option `colorlinks' set `true' on input line 63.
+Package hyperref Info: Option `unicode' set `true' on input line 63.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\puenc.def"
 File: puenc.def 2016/06/24 v6.83q Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 90.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 63.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
@@ -640,23 +640,23 @@ LaTeX Info: Redefining \cite on input line 694.
 ) (vzor_prace.aux)
 \openout1 = `vzor_prace.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 75.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -732,7 +732,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 102.
+Package hyperref Info: Link coloring ON on input line 75.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -742,9 +742,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count120
 )
-LaTeX Info: Redefining \ref on input line 102.
-LaTeX Info: Redefining \pageref on input line 102.
-LaTeX Info: Redefining \nameref on input line 102.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 
 (vzor_prace.out) (vzor_prace.out)
 \@outlinefile=\write3
@@ -755,35 +755,33 @@ LaTeX Info: Redefining \nameref on input line 102.
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 105.
-
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 78.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 105.
-
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 105
-.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 78.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 105
-.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 78.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 105.
+(Font)              <12> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 105.
+(Font)              <8> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 105.
+(Font)              <6> on input line 78.
  [4] (vzor_prace.toc
 [5
 
@@ -795,141 +793,153 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Kapitola 1.
 [7
 
-] [8] [9] [10] [11] [12] [13] [14]
+]
+Overfull \hbox (9.00896pt too wide) in paragraph at lines 100--102
+\T1/lmr/m/n/12 for-mu-lá°·. Bez-platná verze pro-gramu Acro-bat Rea-der v²ak ne
+-u-moº-¬uje tvorbu
+ []
+
+[8] [9] [10] [11] [12]
+Overfull \hbox (16.09918pt too wide) in paragraph at lines 149--150
+[]\T1/lmr/m/it/12 TCPDF \T1/lmr/m/n/12 ke ge-ne-ro-vání PDF do-ku-ment· ne-po-t
+°e-buje ºádné ex-terní knihovny.
+ []
+
+[13] [14] [15]
 Kapitola 2.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 159.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 175.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [15
+) [16
 
-] [16]
+]
+<obr8.png, id=369, 510.40688pt x 614.295pt>
+File: obr8.png Graphic file (type png)
+ <use obr8.png>
+Package pdftex.def Info: obr8.png used on input line 184.
+(pdftex.def)             Requested size: 193.47874pt x 232.86275pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18 <./obr8.png>]
 Kapitola 3.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 169.
-[17
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 202.
+[19
 
-] <obr1.png, id=383, 1013.28563pt x 558.58687pt>
+] [20] <obr1.png, id=411, 1013.28563pt x 558.58687pt>
 File: obr1.png Graphic file (type png)
  <use obr1.png>
-Package pdftex.def Info: obr1.png used on input line 198.
+Package pdftex.def Info: obr1.png used on input line 242.
 (pdftex.def)             Requested size: 290.21811pt x 159.98306pt.
- [18]
-Overfull \hbox (80.37471pt too wide) in paragraph at lines 204--206
-\T1/lmr/m/n/12 Generování do-ku-mentu pro-bíhá ve funkci po-jme-no-vané \T1/lmt
-t/m/n/12 generate_offline_review_form()\T1/lmr/m/n/12 .
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
+\T1/lmr/m/n/12 Generování do-ku-mentu pro-bíhá ve funkci po-jme-no-vané
  []
 
-[19 <./obr1.png>] [20] <obr2.png, id=410, 274.77657pt x 311.66437pt>
+[21] [22 <./obr1.png>] <obr2.png, id=427, 274.77657pt x 311.66437pt>
 File: obr2.png Graphic file (type png)
 
 <use obr2.png>
-Package pdftex.def Info: obr2.png used on input line 224.
+Package pdftex.def Info: obr2.png used on input line 275.
 (pdftex.def)             Requested size: 154.78062pt x 175.56282pt.
- <obr3.png, id=411, 612.03656pt x 672.26157pt>
+ <obr3.png, id=428, 612.03656pt x 672.26157pt>
 File: obr3.png Graphic file (type png)
  <use obr3.png>
-Package pdftex.def Info: obr3.png used on input line 230.
+Package pdftex.def Info: obr3.png used on input line 281.
 (pdftex.def)             Requested size: 154.78062pt x 170.00371pt.
-
-<obr5.jpg, id=415, 596.98032pt x 657.2053pt>
-File: obr5.jpg Graphic file (type jpg)
- <use obr5.jpg>
-Package pdftex.def Info: obr5.jpg used on input line 242.
-(pdftex.def)             Requested size: 193.47874pt x 212.99753pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./obr2.png> <./obr3.png>]
-Overfull \hbox (4.45383pt too wide) in paragraph at lines 251--252
-\T1/lmr/m/n/12 Pokud bychom se sna-ºili pro-klá-dat dva sou-bory. P°i-£emº \T1/
-lmtt/m/n/12 withoutHeader.pdf
+<obr5.jpg, id=432, 596.98032pt x 657.2053pt>
+File: obr5.jpg Graphic file (type jpg)
+ <use obr5.jpg>
+Package pdftex.def Info: obr5.jpg used on input line 293.
+(pdftex.def)             Requested size: 193.47874pt x 212.99753pt.
+ [23] [24 <./obr2.png> <./obr3.png> <./obr5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+\T1/lmr/m/n/12 Pokud bychom se sna-ºili pro-klá-dat dva sou-bory, p°i-£emº
  []
 
-<obr5.png, id=431, 710.655pt x 573.64313pt>
+<obr5.png, id=453, 710.655pt x 573.64313pt>
 File: obr5.png Graphic file (type png)
  <use obr5.png>
-Package pdftex.def Info: obr5.png used on input line 256.
+Package pdftex.def Info: obr5.png used on input line 307.
 (pdftex.def)             Requested size: 154.78062pt x 124.94142pt.
 
-<obr6.png, id=432, 639.13782pt x 531.48563pt>
+<obr6.png, id=454, 639.13782pt x 531.48563pt>
 File: obr6.png Graphic file (type png)
  <use obr6.png>
-Package pdftex.def Info: obr6.png used on input line 262.
+Package pdftex.def Info: obr6.png used on input line 313.
 (pdftex.def)             Requested size: 154.78062pt x 128.71074pt.
 
-Underfull \hbox (badness 1688) in paragraph at lines 263--263
+Underfull \hbox (badness 1688) in paragraph at lines 314--314
 []\T1/lmr/m/n/12 Obrázek 3.6: []Záhlaví do-ku-
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<obr7.png, id=433, 716.6775pt x 572.89032pt>
+<obr7.png, id=455, 716.6775pt x 572.89032pt>
 File: obr7.png Graphic file (type png)
  <use obr7.png>
-Package pdftex.def Info: obr7.png used on input line 269.
+Package pdftex.def Info: obr7.png used on input line 320.
 (pdftex.def)             Requested size: 309.56717pt x 247.45695pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[22 <./obr5.jpg>] [23 <./obr5.png> <./obr6.png>]
+ [25 <./obr5.png> <./obr6.png> <./obr7.png>] [26]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 292.
+(Font)              <10> on input line 343.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 292.
+(Font)              <7> on input line 343.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 292.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 294.
+(Font)              <5> on input line 343.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 345.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 294.
- [24 <./obr7.png>]
-[25] [26]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 345.
+ [27] [28] [29]
 Kapitola 4.
-[27
+[30
 
-] [28] [29] [30]
+] [31] [32] [33]
 Kapitola 5.
-[31
+[34
 
-]
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 439.
- [32] [33] [34] [35]
+] [35] [36] [37] [38]
 Kapitola 6.
-(vzor_prace.bbl [36
+(vzor_prace.bbl [39
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 13.
- [37
+ [40
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 478.
- [38]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 478.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 561.
+ [41]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 561.
  (vzor_prace.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 478.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 478.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 561.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 561.
 Package rerunfilecheck Info: File `vzor_prace.out' has not changed.
-(rerunfilecheck)             Checksum: 88639E67388BCA001185E1FCCD06F241;6676.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 478.
+(rerunfilecheck)             Checksum: 293992044F53B61A764271F0F593389B;6823.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 561.
  ) 
 Here is how much of TeX's memory you used:
- 14473 strings out of 493333
- 206128 string characters out of 3139194
- 420868 words of memory out of 3000000
- 17588 multiletter control sequences out of 15000+200000
+ 14520 strings out of 493333
+ 206706 string characters out of 3139194
+ 434608 words of memory out of 3000000
+ 17608 multiletter control sequences out of 15000+200000
  99067 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,9n,40p,4342b,3679s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,9n,40p,1452b,3681s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
@@ -945,9 +955,9 @@ onts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 TeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt
 12.pfb>
-Output written on vzor_prace.pdf (38 pages, 1016642 bytes).
+Output written on vzor_prace.pdf (41 pages, 1041036 bytes).
 PDF statistics:
- 761 PDF objects out of 1000 (max. 8388607)
- 248 named destinations out of 1000 (max. 500000)
- 428 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 274 named destinations out of 1000 (max. 500000)
+ 441 words of extra memory for PDF output out of 10000 (max. 10000000)
 
